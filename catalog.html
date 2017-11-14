@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Магазин готовых шаблонов 'Nerds'</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<header class="header">
+		<h1 class="visually-hidden">Магазин готовых шаблонов 'Nerds'</h1>
+		<nav class="navigation container clearfix">
+			<a href="index.html">
+				<img class="logo" src="img/nerds-logo.png" width="160" height="65" alt="Nerds">
+			</a>
+			<ul>
+				<li><a href="index.html">Студия</a></li>
+				<li><a href="index.html#partners">Клиенты</a></li>
+				<li><a class="active-link">Магазин</a></li>
+				<li><a href="#contacts">Контакты</a></li>
+			</ul>
+			<a class="cart" href="#">Корзина</a>
+		</nav>
+	</header>
+
+	<div class="inner-heading">
+		<h1>Магазин готовых шаблонов</h1>
+	</div>
+
+	<main class="main container clearfix">
+		<section class="inner-section-left">
+			<form class="catalog-filter">
+				<p>Стоимость</p>
+				<div class="range-filter">
+					<div class="range-controls">
+						<div class="scale">
+							<div class="bar" style="width:70%;"></div>
+						</div>
+						<div class="toggle min-toggle"></div>
+						<div class="toggle max-toggle"></div>
+					</div>
+					<div class="price-controls">
+						от <input type="text" name="min-price" value="0" class="min-price">
+						до <input type="text" name="max-price" value="15 000" class="max-price">
+					</div>
+				</div>
+
+				<p>Сетка</p>
+				
+				<label>
+					<input type="radio" name="type-grid" value="Адаптивная" checked>
+					<span class="radio-indicate"></span>
+					Адаптивная
+				</label>
+				
+				<label>
+					<input type="radio" name="type-grid" value="Фиксированная">
+					<span class="radio-indicate"></span>
+					Фиксированная
+				</label>
+				
+				<label>
+					<input type="radio" name="type-grid" value="Резиновая">
+					<span class="radio-indicate"></span>
+					Резиновая
+				</label>
+
+				<p>Особенности</p>
+				<label>
+					<input type="checkbox" name="slider" checked>
+					<span class="checkbox-indicate"></span>
+					Слайдер
+				</label>
+				<label>
+					<input type="checkbox" name="features-block" disabled>
+					<span class="checkbox-indicate"></span>
+					Блок преимуществ
+				</label>
+				<label>
+					<input type="checkbox" name="news" checked>
+					<span class="checkbox-indicate"></span>
+					Новости
+				</label>
+				<label>
+					<input type="checkbox" name="gallery">
+					<span class="checkbox-indicate"></span>
+					Галерея
+				</label>
+				<label>
+					<input type="checkbox" name="cart">
+					<span class="checkbox-indicate"></span>
+					Корзина
+				</label>
+				<button class="catalog-filter-btn" type="submit">Показать</button>
+			</form>
+		</section>
+
+		<section class="inner-section-right">
+			<div class="sort clearfix">
+				<p>Сортировать:</p>
+				
+				<div class="sort-param">
+					<p class="active">По цене</p>
+					<p>По типу</p>
+					<p>По названию</p>
+					<span class="max-to-min"></span>
+					<span class="min-to-max"></span>
+				</div>
+			</div>
+
+			<div class="product-cards">
+				<div class="product-card">
+					<header>
+						<span></span>
+						<span></span>
+						<span></span>
+					</header>
+					<img src="img/product-1.jpg" width="356" height="576" alt="Sedona">
+					<footer>
+						<h2>Sedona</h2>
+						<p>Информационный сайт для туристов</p>
+						<a href="">9 900 руб.</a>
+					</footer>
+				</div>
+
+				<div class="product-card">
+					<header>
+						<span></span>
+						<span></span>
+						<span></span>
+					</header>
+					<img src="img/product-2.jpg" width="356" height="576" alt="Pink">
+					<footer>
+						<h2>Pink</h2>
+						<p>Продуктовый лендинг приложения для iOS и Android</p>
+						<a href="">9 900 руб.</a>
+					</footer>
+				</div>
+
+				<div class="product-card">
+					<header>
+						<span></span>
+						<span></span>
+						<span></span>
+					</header>
+					<img src="img/product-3.jpg" width="356" height="576" alt="Barbershop">
+					<footer>
+						<h2>Barbershop</h2>
+						<p>Сайт салона красоты для мужчин</p>
+						<a href="">9 900 руб.</a>
+					</footer>
+				</div>
+
+				<div class="product-card">
+					<header>
+						<span></span>
+						<span></span>
+						<span></span>
+					</header>
+					<img src="img/product-4.jpg" width="356" height="576" alt="Mishka">
+					<footer>
+						<h2>Mishka</h2>
+						<p>Интернет магазин вязанных игрушек</p>
+						<a href="">9 900 руб.</a>
+					</footer>
+				</div>
+
+				<div class="product-card">
+					<header>
+						<span></span>
+						<span></span>
+						<span></span>
+					</header>
+					<img src="img/product-5.jpg" width="356" height="576" alt="Aplus">
+					<footer>
+						<h2>Aplus</h2>
+						<p>Лендинг курсов повышения квалификации</p>
+						<a href="">9 900 руб.</a>
+					</footer>
+				</div>
+
+				<div class="product-card">
+					<header>
+						<span></span>
+						<span></span>
+						<span></span>
+					</header>
+					<img src="img/product-6.jpg" width="356" height="576" alt="Kvast">
+					<footer>
+						<h2>Кваст</h2>
+						<p>Промо-сайт производителя крафтового кваса</p>
+						<a href="">9 900 руб.</a>
+					</footer>
+				</div>
+			</div>
+
+			<div class="inner-nav">
+				<a href="#" class="active">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#" class="next-page">Следующая</a>
+			</div>
+
+		</section>
+	</main>
+
+	<div class="map">
+		<div class="map-frame container" id="contacts">
+			<iframe src="https://yandex.ru/map-widget/v1/-/CBa5NMDx2D" width="1440" height="420" frameborder="0"></iframe>
+			<div class="contact-card">
+				<h4>NЁRDS DESIGN STUDIO</h4>
+				<p>191186, Санкт-Петербург, <br>ул. Б. Конюшенная, д. 19/8</p>
+				<p>тел. +7(812) 275-75-75</p>
+				<a class="contact-btn" href="#">Напишите нам</a>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="footer container clearfix">
+			<div class="soc-btn">
+				<a href="https://vk.com/" target="_blank">Мы В контакте</a>
+				<a href="https://www.facebook.com/" target="_blank">Мы в Facebook</a>
+				<a href="https://www.instagram.com/" target="_blank">Мы в Instagram</a>
+			</div>
+			<div class="soc-promo">
+				<b>Давайте дружить, это выгодно!</b>
+				<p>Скидка 10% для друзей из социальных сетей.</p>
+			</div>
+		</div>
+	</footer>
+	
+	<div class="feedback-modal">
+		<button class="feedback-modal-close" type="button" title="Закрыть">Закрыть</button>
+		<h2 class="feedback-modal-title">Напишите нам</h2>
+		<form class="feedback-form" action="url" method="post">
+			<div class="feed clearfix">
+				<div class="feed-left">
+					<label for="feedback-name">Ваше имя:</label>
+					<input class="feedback-name" id="feedback-name" type="text" name="name" placeholder="Представьтесь, пожалуйста" required>
+				</div>
+				<div class="feed-right">
+					<label for="feedback-email">Ваш email:</label>
+					<input class="feedback-email" id="feedback-email" type="email" name="email" placeholder="Для отправки ответа" required>
+				</div>
+			</div>
+			<label for="feedback-text">Текст письма:</label>
+			<textarea class="feedback-text" id="feedback-text" name="feedback-text" rows="5" cols="10" placeholder="В свободной форме" required></textarea>
+			<button class="btn" type="submit">Войти</button>
+		</form>
+	</div>
+	<div class="modal-overlay"></div>
+	<script src="js/script.js"></script>
+</body>
+</html>

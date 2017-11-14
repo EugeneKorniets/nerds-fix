@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Магазин готовых шаблонов 'Nerds'</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<header class="header">
+		<h1 class="visually-hidden">Магазин готовых шаблонов 'Nerds'</h1>
+		<nav class="navigation container clearfix">
+			<a>
+				<img class="logo" src="img/nerds-logo.png" width="160" height="65" alt="Nerds">
+			</a>
+			<ul>
+				<li><a class="active-link">Студия</a></li>
+				<li><a href="#partners">Клиенты</a></li>
+				<li><a href="catalog.html">Магазин</a></li>
+				<li><a href="#contacts">Контакты</a></li>
+			</ul>
+			<a class="cart" href="#">Корзина</a>
+		</nav>
+	</header>
+
+	<div class="slider">
+		<input type="radio" id="btn-1" name="toggle" checked>
+		<input type="radio" id="btn-2" name="toggle">
+		<input type="radio" id="btn-3" name="toggle">
+		<div class="slides container">
+			<div class="slider-controls">
+					<label for="btn-1"></label>
+					<label for="btn-2"></label>
+					<label for="btn-3"></label>
+			</div>
+			<div class="slide">
+				<div class="slide-text">
+					<b class="slide-title">Долго, дорого, скрупулезно.</b>
+					<p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+					<a class="slide-btn" href="#">Узнать больше</a>
+				</div>
+			</div>
+			<div class="slide">
+				<div class="slide-text">
+					<b class="slide-title">Любим математику как никто другой.</b>
+					<p>Никакого креатива, только математические формулы для расчета идаельных пропорций.</p>
+					<a class="slide-btn" href="#">Узнать больше</a>
+				</div>
+			</div>
+			<div class="slide">
+				<div class="slide-text">
+					<b class="slide-title">Только ночь, только хардкор.</b>
+					<p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+					<a class="slide-btn" href="#">Узнать больше</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<main class="main container">
+		<h2 class="visually-hidden">Наши преимущества</h2>
+		
+		<div class="features clearfix">
+			
+			<div class="feature">
+				<img src="img/feature-1.jpg" width="300" height="146" alt="Веб-сайты">
+				<b>Веб-сайты</b>
+				<p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+				<a class="features-button button-1" href="#">Заказать</a>
+			</div>
+			
+			<div class="feature">
+				<img src="img/feature-2.jpg" width="300" height="146" alt="Приложения">
+				<b>Приложения</b>
+				<p>Покорите топ-10 приложений в AppStore и Google Play</p>
+				<a class="features-button button-2" href="#">Заказать</a>
+			</div>
+			
+			<div class="feature">
+				<img src="img/feature-3.jpg" width="300" height="146" alt="Презентации">
+				<b>Презентации</b>
+				<p>Вы даже не подозреваете, насколько вы изумительны!</p>
+				<a class="features-button button-3" href="#">Заказать</a>
+			</div>
+
+		</div>
+
+		<div class="sections clearfix">
+			
+			<section class="left-section">
+				<h3>Мы - маленькая, но гордая дизайн-студия из Краснодара.</h3>
+				<p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
+				<b>Выполняем заказы на разработку:</b>
+				<ul>
+					<li>Веб-сайтов любой сложности</li>
+					<li>Мобильных приложений для iOS и Android</li>
+					<li>Слайдшоу и видео для корпоративных презентаций</li>
+				</ul>
+			</section>
+			
+			<section class="right-section">
+				<img src="img/nerds-illustration.jpg" width="360" height="208" alt="Nerds">
+				<b>С 2004 года любим точность во всем:</b>
+				<div class="clearfix">
+					<p><span>146<sup>%</sup></span>Уровень самоотдачи</p>
+					<p><span>100<sup>%</sup></span>Соблюдение сроков</p>
+					<p><span>50<sup>%</sup></span>Минимальная предоплата</p>
+				</div>
+			</section>
+		</div>
+
+		<aside class="partner-links" id="partners">
+			<a href="#">HTML Academy</a>
+			<a href="#">Barbershop Borodinski</a>
+			<a href="#">Pink></a>
+			<a href="#">Mishka></a>
+		</aside>
+
+	</main>
+
+	<div class="map">
+		<div class="map-frame container" id="contacts">
+			<iframe src="https://yandex.ru/map-widget/v1/-/CBa5NMDx2D" width="1440" height="420" frameborder="0"></iframe>
+			<div class="contact-card">
+				<h4>NЁRDS DESIGN STUDIO</h4>
+				<p>191186, Санкт-Петербург, <br>ул. Б. Конюшенная, д. 19/8</p>
+				<p>тел. +7(812) 275-75-75</p>
+				<a class="contact-btn" href="#">Напишите нам</a>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="footer container clearfix">
+			<div class="soc-btn">
+				<a href="https://vk.com/" target="_blank">Мы В контакте</a>
+				<a href="https://www.facebook.com/" target="_blank">Мы в Facebook</a>
+				<a href="https://www.instagram.com/" target="_blank">Мы в Instagram</a>
+			</div>
+			<div class="soc-promo">
+				<b>Давайте дружить, это выгодно!</b>
+				<p>Скидка 10% для друзей из социальных сетей.</p>
+			</div>
+		</div>
+	</footer>
+	
+	<div class="feedback-modal">
+		<button class="feedback-modal-close" type="button" title="Закрыть">Закрыть</button>
+		<h2 class="feedback-modal-title">Напишите нам</h2>
+		<form class="feedback-form" action="url" method="post">
+			<div class="feed clearfix">
+				<div class="feed-left">
+					<label for="feedback-name">Ваше имя:</label>
+					<input class="feedback-name" id="feedback-name" type="text" name="name" placeholder="Представьтесь, пожалуйста" required>
+				</div>
+				<div class="feed-right">
+					<label for="feedback-email">Ваш email:</label>
+					<input class="feedback-email" id="feedback-email" type="email" name="email" placeholder="Для отправки ответа" required>
+				</div>
+			</div>
+			<label for="feedback-text">Текст письма:</label>
+			<textarea class="feedback-text" id="feedback-text" name="feedback-text" rows="5" cols="10" placeholder="В свободной форме" required></textarea>
+			<button class="btn" type="submit">Войти</button>
+		</form>
+	</div>
+	<div class="modal-overlay"></div>
+	<script src="js/script.js"></script>
+</body>
+</html>
