@@ -1,6 +1,6 @@
-// работа с модальными окнами start
+// модальные окна start
 
-// объявление всех переменных для работы с модальными окнами
+// переменные для модальных окон
 var contactBtn = document.querySelector(".contact-btn");
 var modalOverlay = document.querySelector(".modal-overlay");
 var feedbackPopup = document.querySelector(".feedback-modal");
@@ -40,4 +40,34 @@ window.addEventListener("keydown", function(event) {
         }
     }
 });
-// работа с модальными окнами end
+// модальные окна end
+
+
+
+// автоматическая прокрутка слайдера start
+var sliderInputs = document.getElementsByClassName('slider-input');
+
+setInterval (sliderChanges, 5000); // устанавливаем интервал вызова функции смены слайдов
+
+/* Функция смены слайдов
+ * Запускаем цикл поиска активного слайда в коллекции
+ * Проверяем активность текущего слайда
+ * При нахождении активного слайда, деактивируем его
+ * Если слайд последний в массиве, активируем первый
+ * Если слайд не последний, активируем следующий
+*/
+function sliderChanges() {
+    for (var i = 0; i <= sliderInputs.length - 1; i++) {
+        if (sliderInputs[i].checked == true) {
+            sliderInputs[i].checked = false;
+            if(i == sliderInputs.length - 1) {
+                sliderInputs[0].checked = true;
+                return;
+            } else {
+                sliderInputs[i+1].checked = true;
+                return;
+            }
+        }
+    }
+}
+// автоматическая прокрутка слайдера start
