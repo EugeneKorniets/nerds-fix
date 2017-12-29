@@ -55,19 +55,19 @@
 				<label>
 					<input type="radio" name="type-grid" value="Адаптивная" checked>
 					<span class="radio-indicate"></span>
-					Адаптивная
+					<span class="radio-name">Адаптивная</span>
 				</label>
 				
 				<label>
 					<input type="radio" name="type-grid" value="Фиксированная">
 					<span class="radio-indicate"></span>
-					Фиксированная
+					<span class="radio-name">Фиксированная</span>
 				</label>
 				
 				<label>
-					<input type="radio" name="type-grid" value="Резиновая">
+					<input type="radio" name="type-grid" value="Резиновая" disabled>
 					<span class="radio-indicate"></span>
-					Резиновая
+					<span class="radio-name">Резиновая</span>
 				</label>
 
 				<p>Особенности</p>
@@ -105,16 +105,16 @@
 				<p>Сортировать:</p>
 				
 				<div class="sort-param">
-					<p class="active">По цене</p>
-					<p>По типу</p>
-					<p>По названию</p>
+					<p class="sort-by-price">По цене</p>
+					<p class="sort-by-type">По типу</p>
+					<p class="sort-by-name">По названию</p>
 					<span class="max-to-min"></span>
 					<span class="min-to-max"></span>
 				</div>
 			</div>
 
-			<div class="product-cards">
-				<div class="product-card">
+			<div class="product-cards" id="product-cards">
+				<div class="product-card" layout="fix">
 					<header>
 						<span></span>
 						<span></span>
@@ -122,13 +122,13 @@
 					</header>
 					<img src="img/product-1.jpg" width="356" height="576" alt="Sedona">
 					<footer>
-						<h2>Sedona</h2>
+						<h2 class="product-name">Sedona</h2>
 						<p>Информационный сайт для туристов</p>
-						<a href="">9 900 руб.</a>
+						<a href="#" class="product-price">29 900 руб.</a>
 					</footer>
 				</div>
 
-				<div class="product-card">
+				<div class="product-card" layout="adaptive">
 					<header>
 						<span></span>
 						<span></span>
@@ -136,13 +136,13 @@
 					</header>
 					<img src="img/product-2.jpg" width="356" height="576" alt="Pink">
 					<footer>
-						<h2>Pink</h2>
+						<h2 class="product-name">Pink</h2>
 						<p>Продуктовый лендинг приложения для iOS и Android</p>
-						<a href="">9 900 руб.</a>
+						<a href="#" class="product-price">19 900 руб.</a>
 					</footer>
 				</div>
 
-				<div class="product-card">
+				<div class="product-card" layout="fix">
 					<header>
 						<span></span>
 						<span></span>
@@ -150,13 +150,13 @@
 					</header>
 					<img src="img/product-3.jpg" width="356" height="576" alt="Barbershop">
 					<footer>
-						<h2>Barbershop</h2>
+						<h2 class="product-name">Barbershop</h2>
 						<p>Сайт салона красоты для мужчин</p>
-						<a href="">9 900 руб.</a>
+						<a href="#" class="product-price">15 900 руб.</a>
 					</footer>
 				</div>
 
-				<div class="product-card">
+				<div class="product-card" layout="adaptive">
 					<header>
 						<span></span>
 						<span></span>
@@ -164,13 +164,13 @@
 					</header>
 					<img src="img/product-4.jpg" width="356" height="576" alt="Mishka">
 					<footer>
-						<h2>Mishka</h2>
+						<h2 class="product-name">Mishka</h2>
 						<p>Интернет магазин вязанных игрушек</p>
-						<a href="">9 900 руб.</a>
+						<a href="#" class="product-price">25 900 руб.</a>
 					</footer>
 				</div>
 
-				<div class="product-card">
+				<div class="product-card" layout="flex">
 					<header>
 						<span></span>
 						<span></span>
@@ -178,13 +178,13 @@
 					</header>
 					<img src="img/product-5.jpg" width="356" height="576" alt="Aplus">
 					<footer>
-						<h2>Aplus</h2>
+						<h2 class="product-name">Aplus</h2>
 						<p>Лендинг курсов повышения квалификации</p>
-						<a href="">9 900 руб.</a>
+						<a href="#" class="product-price">9 900 руб.</a>
 					</footer>
 				</div>
 
-				<div class="product-card">
+				<div class="product-card" layout="flex">
 					<header>
 						<span></span>
 						<span></span>
@@ -192,9 +192,9 @@
 					</header>
 					<img src="img/product-6.jpg" width="356" height="576" alt="Kvast">
 					<footer>
-						<h2>Кваст</h2>
+						<h2 class="product-name">Kvast</h2>
 						<p>Промо-сайт производителя крафтового кваса</p>
-						<a href="">9 900 руб.</a>
+						<a href="#" class="product-price">11 900 руб.</a>
 					</footer>
 				</div>
 			</div>

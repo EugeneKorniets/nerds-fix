@@ -132,6 +132,7 @@ if (rangeFilter != null) {
       minPriceInput.value = (maxPrice * newLeft / (scaleWidth - 2 * toggleWidth)).toFixed();
     };
 
+    // при отпускании мыши удаляем все назначенные обработчики передвижениями мыши
     document.onmouseup = function() {
       document.onmousemove = document.onmouseup = null;
     };
@@ -178,7 +179,7 @@ if (rangeFilter != null) {
       document.onmousemove = document.onmouseup = null;
     };
 
-    return false;
+    return false; // disable selection start (cursor change)
   });
 
   // предотвращаем обработку события drag HTML API
@@ -280,5 +281,120 @@ function init(){
     myMap.behaviors
     .disable(['rightMouseButtonMagnifier', 'scrollZoom']);
 };
-
 // yandex map end
+
+
+// product cards sort start
+if (document.getElementById('product-cards') != null) {
+  var priceSortBtn = document.querySelector('.sort-by-price');
+  var typeSortBtn = document.querySelector('.sort-by-type');
+  var nameSortBtn = document.querySelector('.sort-by-name');
+  // block of product cards
+  var productCards = document.getElementById('product-cards');
+  // collection of product cards
+  var cardsCollection = productCards.querySelectorAll('.product-card');
+  // transform Collection to Array
+  var cardsArray = [].slice.call(cardsCollection);
+
+  // priceSortBtn handler
+  priceSortBtn.addEventListener('click', function() {
+    // sort by price
+    cardsArray.sort(comparePrice);
+    productCards.innerHTML = '';
+    if (priceSortBtn.classList.contains('descending')) {
+      for (i = 0; i < cardsArray.length; i++) {
+        productCards.appendChild(cardsArray[i]);
+      };
+      priceSortBtn.classList.remove('descending');
+      priceSortBtn.classList.add('ascending');
+    } else {
+      for (i = cardsArray.length - 1; i >= 0 ; i--) {
+        productCards.appendChild(cardsArray[i]);
+      };
+      priceSortBtn.classList.remove('ascending');
+      priceSortBtn.classList.add('descending');
+    };
+    nameSortBtn.classList.remove('descending');
+    nameSortBtn.classList.remove('ascending');
+    typeSortBtn.classList.remove('descending');
+    typeSortBtn.classList.remove('ascending');
+  });
+
+  // typeSortBtn handler
+  typeSortBtn.addEventListener('click', function() {
+    // sort by type
+    cardsArray.sort(compareType);
+    productCards.innerHTML = '';
+    if (typeSortBtn.classList.contains('descending')) {
+      for (i = 0; i < cardsArray.length; i++) {
+        productCards.appendChild(cardsArray[i]);
+      };
+      typeSortBtn.classList.remove('descending');
+      typeSortBtn.classList.add('ascending');
+    } else {
+      for (i = cardsArray.length - 1; i >= 0 ; i--) {
+        productCards.appendChild(cardsArray[i]);
+      };
+      typeSortBtn.classList.remove('ascending');
+      typeSortBtn.classList.add('descending');
+    };
+    nameSortBtn.classList.remove('descending');
+    nameSortBtn.classList.remove('ascending');
+    priceSortBtn.classList.remove('descending');
+    priceSortBtn.classList.remove('ascending');
+  });
+
+  // nameSortBtnHandler
+  nameSortBtn.addEventListener('click', function() {
+    // sort by name
+    cardsArray.sort(compareName);
+    productCards.innerHTML = '';
+    if (nameSortBtn.classList.contains('descending')) {
+      for (i = 0; i < cardsArray.length; i++) {
+        productCards.appendChild(cardsArray[i]);
+      };
+      nameSortBtn.classList.remove('descending');
+      nameSortBtn.classList.add('ascending');
+    } else {
+      for (i = cardsArray.length - 1; i >= 0 ; i--) {
+        productCards.appendChild(cardsArray[i]);
+      };
+      nameSortBtn.classList.remove('ascending');
+      nameSortBtn.classList.add('descending');
+    };
+    priceSortBtn.classList.remove('descending');
+    priceSortBtn.classList.remove('ascending');
+    typeSortBtn.classList.remove('descending');
+    typeSortBtn.classList.remove('ascending');
+  });
+  
+  // function for method sort
+  function comparePrice (a, b) {
+    var cardA = a.querySelector('.product-price');
+    var cardB = b.querySelector('.product-price');
+    var priceA = Number(cardA.innerHTML.replace('руб.', '').replace(' ', ''));
+    var priceB = Number(cardB.innerHTML.replace('руб.', '').replace(' ', ''));
+    return priceA - priceB;
+  };
+
+  // function for method sort
+  function compareName (a, b) {
+    var cardA = a.querySelector('.product-name');
+    var cardB = b.querySelector('.product-name');
+    var nameA = cardA.innerHTML;
+    var nameB = cardB.innerHTML;
+    if (nameA > nameB) return 1;
+    if (nameA < nameB) return -1;
+    if (nameA == nameB) return 0;
+  };
+
+  // function for method sort
+  function compareType (a, b) {
+    var typeA = a.getAttribute('layout');
+    var typeB = b.getAttribute('layout');
+    if (typeA > typeB) return 1;
+    if (typeA < typeB) return -1;
+    if (typeA == typeB) return 0;
+  };
+};
+// product cards sort end
