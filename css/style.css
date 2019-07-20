@@ -1,4 +1,8 @@
 /* common properties for all pages */
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	min-width: 1200px;
 	font-family: "Roboto", "Arial", sans-serif;
